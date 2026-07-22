@@ -10,8 +10,8 @@ app.use(cors({
 
 app.get("/", (req, res) => {
     res.json({
-        "name":"Abhishek Prajapati",
-        "class":"D Pharma"
+        "name": "Abhishek Prajapati",
+        "class": "D Pharma"
     });
 });
 
