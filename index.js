@@ -5,6 +5,6 @@ const mongoose = require('mongoose')
 const app = express()
 
 app.get("/",(req,res)=>{
-    res.json("Server is Running")
+    res.json("Hello Abhishek")
 })
 
