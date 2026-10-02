@@ -7,44 +7,50 @@
     <title>Coding</title>
 </head>
 <style>
-    body{
+    body {
         background-color: rgb(135, 247, 113);
     }
-    body:hover{
+
+    body:hover {
         background-color: red;
     }
-    div{
+
+    div {
         background-color: yellow;
-        padding: 10px  ;
+        padding: 10px;
     }
 </style>
+
 <body>
     <h1>hello Abhishek Prajapati</h1>
     <button id="clickMe">Click Me</button>
 
     <form action="">
         <div>
-            <label for="" >Name</label>
+            <label for="">Name</label>
             <input type="text" name="" id="name">
         </div>
         <div>
-            <label for="" >Files</label>
+            <label for="">Files</label>
             <input type="file" name="" id="files">
         </div>
     </form>
 
 </body>
 <script>
-    document.getElementById("clickMe").addEventListener("click", (e) => {
-        var name = document.getElementById("name").value ;
-
-        if(name){
-            alert(name)
-        }else{
-           alert("Not Data Here")
-        }
-        
+    fetch('https://seconcode.vercel.app/',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: document.getElementById('name').value,
+        })
     })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        });
 </script>
 
 </html>
