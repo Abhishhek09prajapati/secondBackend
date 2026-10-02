@@ -9,10 +9,12 @@ app.use(cors({
 }))
 
 app.get("/", (req, res) => {
-    res.json({
+   var a = res.json({
         "name": "Abhishek Prajapati",
         "class": "D Pharma"
     });
+
+    res.send(a);
 });
 
 app.listen(2000, () => {
