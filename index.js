@@ -10,7 +10,11 @@ app.use(cors({
 }));
 
 app.get("/", (req, res) => {  
-    res.send(req.body);
+    res.send({
+        message: "Server is Connected",
+        name: "Node.js Server",
+    });
+    
 });
 
 app.listen(2000, () => {
